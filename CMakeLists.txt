@@ -1,4 +1,4 @@
-set(COMPONENT_ADD_INCLUDEDIRS csrc)
+set(COMPONENT_ADD_INCLUDEDIRS csrc cppsrc)
 set(COMPONENT_SRCS "csrc/u8x8_setup.c"
                     "csrc/u8x8_u8toa.c"
                     "csrc/u8x8_d_ssd1306_96x16.c"
@@ -89,7 +89,14 @@ set(COMPONENT_SRCS "csrc/u8x8_setup.c"
                     "csrc/u8x8_d_a2printer.c"
                     "csrc/u8x8_d_st7565.c"
                     "csrc/u8x8_capture.c"
-                    "csrc/u8g2_button.c")
+                    "csrc/u8g2_button.c"
+                    "cppsrc/U8x8lib.cpp"
+                    "cppsrc/U8g2lib.cpp"
+                    "csrc/mui.c"
+                    "csrc/mui_u8g2.c"
+        )
+set(COMPONENT_ADD_INCLUDEDIRS csrc cppsrc)
+
 
 if(COMMAND register_component)
     set(COMPONENT_NAME ".")
